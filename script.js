@@ -1,19 +1,20 @@
 const sorterbutton = document.querySelector("#btn");
 sorterbutton.addEventListener("click", function () {
-  const inputentre = parseInt(document.getElementById("input-entre").value, 10);
-  const inpute = parseInt(document.getElementById("input-e").value, 10);
+  const inputmin = parseInt(document.getElementById("input-entre").value, 10);
+  const inputmax = parseInt(document.getElementById("input-e").value, 10);
 
   const erro = document.querySelector("#erromsg");
 
-  if (inputentre > inpute) {
-    erro.innerText = "O valor minimo não pode ser maior que o valor maximo";
+  if (inputmin >= inputmax) {
+    erro.innerText =
+      "O valor minimo não pode ser maior ou igual ao valor maximo";
     return;
     result.innerText = "";
   }
   erro.innerText = "";
   result.innerText = "";
 
-  if (isNaN(inputentre) || isNaN(inpute)) {
+  if (isNaN(inputmin) || isNaN(inputmax)) {
     erro.innerText = "Opa! Você esqueceu de preencher os números.";
 
     result.innerText = "";
@@ -22,7 +23,7 @@ sorterbutton.addEventListener("click", function () {
   result.innerText = "";
 
   const NumeroAleatorio =
-    Math.floor(Math.random() * (inpute - inputentre + 1)) + inputentre;
+    Math.floor(Math.random() * (inputmax - inputmin + 1)) + inputmin;
 
   document.getElementById("result").innerText = NumeroAleatorio;
 });
