@@ -40,7 +40,7 @@ h1 {
   width: 600px;
   margin: 40px auto 40px auto;
   border-radius: 25px;
-  border: 1px solid #3a3afb;
+  border: none;
   filter: blur(2);
   box-shadow: 10px 10px 40px 5px #000000;
 }
@@ -61,12 +61,13 @@ input {
   opacity: 1;
   border-width: 1px;
   margin: 20px;
-  padding-left: 10px;
+  padding-left: 40px;
   font-size: 30px;
-  border: 1px solid #fff;
+  border: none;
   outline: none;
-  background-color: #3a3afb;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
 }
 
 button {
@@ -77,26 +78,24 @@ button {
   border: 1px solid #fff;
   border-radius: 14px;
   background-color: #3a3afb;
-  box-shadow: 5px 5px 60px 1px #3a3afb;
   font-size: 40px;
   color: white;
+  
 }
 
 button:hover {
-  opacity: 0.5;
+  opacity: 0.7;
   cursor: pointer;
-  width: 210px;
-  height: 77px;
+  transform: scale(1.1)
 }
 
 button:active {
-  width: 190px;
-  height: 70px;
+  transform: scale(1)
 }
 
 #result {
   margin: 40px;
-  font-size: 50px;
+  font-size: 80px;
   font-weight: bolder;
   text-align: center;
 }
